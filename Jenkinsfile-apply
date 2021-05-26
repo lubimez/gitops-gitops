@@ -31,7 +31,7 @@ pipeline {
         branch 'main'
          }
          steps {
-           sh 'oc login -u testuser -p redhat123 --insecure-skip-tls-verity https://kubernetes.default.svc:443'
+           sh 'oc login -u testuser -p redhat123 --insecure-skip-tls-verity=true https://kubernetes.default.svc:443'
            sh 'oc new-project test-testuser || true'
         }
       
